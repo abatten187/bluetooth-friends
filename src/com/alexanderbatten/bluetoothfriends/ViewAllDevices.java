@@ -163,7 +163,7 @@ public class ViewAllDevices extends ListActivity {
 	        deviceName.setText(device.getCustomOrNameOrMac());
 	        
 	        deviceRelationshipStatus = (TextView) row.findViewById(R.id.devicelistrow_relationshipStatus);
-	        deviceRelationshipStatus.setText("lol");
+	        deviceRelationshipStatus.setText("change");
 	        
 	        deviceRelationshipProgress = (ProgressBar) row.findViewById(R.id.devicelistrow_relationshipProgress);
 	        deviceRelationshipProgress.setMax(100);
