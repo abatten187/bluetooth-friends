@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+	<ListPreference
+		android:key="setting_scanInterval"
+  		android:title="Scan interval"
+ 		android:summary="Set interval for bluetooth scans"
+		android:defaultValue="30000"
+		android:entries="@array/setting_scanInterval"
+		android:entryValues="@array/setting_scanInterval_values" />   
+            
+	<CheckBoxPreference
+	    android:key="setting_backgroundRun"
+	    android:title="Run in Background"
+	    android:summary="Allow bluetooth scans in background"
+	    android:defaultValue="true"/>
+
+	<PreferenceCategory
+		android:title="Online Leaderboard">
+		
+		<EditTextPreference 
+	        android:key="setting_deviceName"
+	        android:title="Alias"
+	        android:summary="Used to display on the online leaderboard"
+	        android:defaultValue="ForeverAlone" />
+	        
+	</PreferenceCategory>	
+	
+	<PreferenceCategory
+		android:title="Notifications">
+		<CheckBoxPreference
+		 	android:key="setting_notification"
+		 	android:title="Notify on Encounter"
+		 	android:defaultValue="false"
+		 	android:summary="Display notification in the status bar when encountering another device"/>
+		
+		<CheckBoxPreference
+		    android:key="setting_vibrate"
+		    android:title="Vibrate on Encounter"
+		    android:defaultValue="false"
+		    android:summary="Haptic feedback for when you encounter another device"/>
+		    
+	</PreferenceCategory>
+</PreferenceScreen>

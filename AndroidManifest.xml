@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    package="com.alexanderbatten.bluetoothfriends" 
+    android:versionCode="2" 
+    android:versionName="1.0.5 (8/02/12)" >
+    
+    <!-- Permissions -->
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.VIBRATE"/>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-sdk android:minSdkVersion="7" />
+    
+    <application android:icon="@drawable/ic_launcher" android:label="@string/app_name" > 
+        
+        <!-- Services -->     
+        <service android:enabled="true" android:name=".BluetoothService"/>
+        <service android:enabled="true" android:name=".ServerService"/>
+        <service android:enabled="true" android:name=".BluetoothService2"/>
+        
+        <!-- Activities -->
+        <activity android:name=".MainMenu" android:label="@string/app_name" ><intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter></activity>
+        <activity android:name=".ViewAllDevices" android:label="@string/app_name" />
+        <activity android:name=".ViewDevice" android:label="@string/app_name" />
+        <activity android:name=".OnlineLeaderboard" android:label="@string/app_name" />
+        <activity android:name=".Settings" android:label="@string/settings_title" />
+        <activity android:name=".UploadData" android:label="@string/app_name" />
+        <activity android:name=".UploadTest" android:label="@string/app_name" />
+        
+        <!-- Receiver -->
+        <receiver android:name=".BluetoothFriendsReceiver" android:process=":remote"><intent-filter><action android:name="android.intent.action.BOOT_COMPLETED" /></intent-filter></receiver>
+    </application>
+</manifest>

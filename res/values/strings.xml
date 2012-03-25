@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, BluetoothFriends!</string>
+    <string name="app_name">BluetoothFriends</string>
+    
+    <string name="mainmenu_title">BluetoothFriends</string>
+    <string name="mainmenu_surrounding">View Surrounding</string>
+    <string name="mainmenu_viewall">Friends</string>
+    <string name="mainmenu_settings">Settings</string>
+    <string name="mainmenu_upload">Upload test</string>
+    <string name="mainmenu_leaderboard">Online Leaderboard</string>
+    <string name="mainmenu_quit">Quit</string>
+    
+    <string name="settings_title">BluetoothFriends Settings</string>
+
+    <string name="devicelist_context_view">View</string>
+    <string name="devicelist_context_favourite">Favourite</string>
+    <string name="devicelist_context_delete">Delete</string>
+    
+    
+</resources>

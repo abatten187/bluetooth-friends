@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu 
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item 
+        android:id="@+id/devicelist_context_view" 
+        android:text="View" />
+    <item 
+        android:id="@+id/devicelist_context_favourite" 
+        android:text="@string/devicelist_context_favourite" />
+    <item 
+        android:id="@+id/devicelist_context_delete" 
+        android:text="@string/devicelist_context_delete" />
+</menu>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="setting_scanInterval">
+        <item name="30">30 sec</item>
+        <item name="60">1 min</item>
+        <item name="120">2 min</item>
+        <item name="300">5 min</item>
+        <item name="600">10 min</item>
+    </string-array>
+	<string-array name="setting_scanInterval_values">
+	    <item name="30">30000</item>
+	    <item name="60">60000</item>
+	    <item name="120">120000</item>
+	    <item name="300">300000</item>
+	    <item name="600">600000</item>
+	</string-array>
+</resources>
