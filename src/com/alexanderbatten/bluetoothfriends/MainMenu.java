@@ -11,7 +11,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
-public class MainMenu extends Activity implements OnClickListener {
+public class MainMenu extends Activity
+{
 	private final String TAG = "MainMenu";
 	
 	public static Context ACTIVE_INSTANCE;
@@ -25,22 +26,6 @@ public class MainMenu extends Activity implements OnClickListener {
         Log.i(TAG, "onCreate");
         
         ACTIVE_INSTANCE = this;
-        
-        //Set up buttons
-        View buttonViewAll = this.findViewById(R.id.mainmenu_button_viewall);
-        buttonViewAll.setOnClickListener(this);
-        View buttonSettings = this.findViewById(R.id.mainmenu_button_settings);
-        buttonSettings.setOnClickListener(this);
-        //View buttonUpload = this.findViewById(R.id.mainmenu_button_upload);
-        //buttonUpload.setOnClickListener(this);
-        View buttonLeaderboard = this.findViewById(R.id.mainmenu_button_leaderboard);
-        buttonLeaderboard.setOnClickListener(this);
-        //View buttonQuit = this.findViewById(R.id.mainmenu_button_quit);
-        //buttonQuit.setOnClickListener(this);
-        //View buttonOn = this.findViewById(R.id.mainmenu_button_on);
-        //buttonOn.setOnClickListener(this);
-        //View buttonOff = this.findViewById(R.id.mainmenu_button_off);
-        //buttonOff.setOnClickListener(this);
         
         //Start up AlarmManagers
 		Settings.startBluetoothScanAlarmManager(this);
@@ -80,40 +65,44 @@ public class MainMenu extends Activity implements OnClickListener {
 			Settings.stopServerUploadAlarmManager(this);
 		}
 	}
-
-	public void onClick(View v) {
-		Log.i(TAG, "onClick");
-		
-		switch (v.getId()){
-			case R.id.mainmenu_button_viewall:
-				Log.v(TAG, "ViewAll button clicked");
-				this.startActivity(new Intent(this, ViewAllDevices.class));
-				break;
-			case R.id.mainmenu_button_settings:
-				Log.v(TAG, "Settings button clicked");
-				this.startActivity(new Intent(this, Settings.class));
-				break;
-			//case R.id.mainmenu_button_upload:
-				//Log.v(TAG, "Upload button clicked");
-				//new UploadTest(this).execute();
-				//break;
-			case R.id.mainmenu_button_leaderboard:
-				Log.v(TAG, "Leaderboard button clicked");
-				this.startActivity(new Intent(this, OnlineLeaderboard.class));
-				break;
-			//case R.id.mainmenu_button_quit:
-				//Log.v(TAG, "Quit button clicked");
-				//this.finish();
-				//break;
-			//case R.id.mainmenu_button_on:
-				//Log.v(TAG, "on button clicked");
-				//break;
-			//case R.id.mainmenu_button_off:
-				//Log.v(TAG, "off button clicked");
-				//break;
-			
-		}
+	
+	public void onViewAllClick(View v)
+	{
+		Log.v(TAG, "ViewAll button clicked");
+		startActivity(new Intent(this, ViewAllDevices.class));
 	}
 	
+	public void onUploadClick(View v)
+	{
+		//Log.v(TAG, "Upload button clicked");
+		//new UploadTest(this).execute();
+	}
 	
+	public void onLeaderboardClick(View v)
+	{
+		Log.v(TAG, "Leaderboard button clicked");
+		this.startActivity(new Intent(this, OnlineLeaderboard.class));
+	}
+	
+	public void onSettingsClick(View v)
+	{
+		Log.v(TAG, "Settings button clicked");
+		this.startActivity(new Intent(this, Settings.class));
+	}
+	
+	public void onQuitClick(View v)
+	{
+		//Log.v(TAG, "Quit button clicked");
+		//this.finish();
+	}
+	
+	public void onOnClick(View v)
+	{
+		Log.v(TAG, "on button clicked");
+	}	
+	
+	public void onOffClick(View v)
+	{
+		Log.v(TAG, "on button clicked");
+	}
 }

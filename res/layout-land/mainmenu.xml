@@ -51,6 +51,7 @@
             android:id="@+id/mainmenu_button_viewall"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:onClick="onViewAllClick"
             android:text="@string/mainmenu_viewall" />
 
         <!--
@@ -58,6 +59,7 @@
 	        android:id="@+id/mainmenu_button_upload"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
+	        android:onClick="onUploadClick"
 	        android:text="@string/mainmenu_upload" />
         -->
 
@@ -65,12 +67,14 @@
             android:id="@+id/mainmenu_button_leaderboard"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:onClick="onLeaderboardClick"
             android:text="@string/mainmenu_leaderboard" />
 
         <Button
             android:id="@+id/mainmenu_button_settings"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:onClick="onSettingsClick"
             android:text="@string/mainmenu_settings" />
 
         <!--
@@ -78,6 +82,7 @@
 	        android:id="@+id/mainmenu_button_quit"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
+	        android:onClick="onQuitClick"
 	        android:text="@string/mainmenu_quit" />
         -->
 
@@ -87,12 +92,14 @@
 	        android:id="@+id/mainmenu_button_on"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
+	        android:onClick="onOnClick"
 	        android:text="on" />
 
 	    <Button
 	        android:id="@+id/mainmenu_button_off"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
+	        android:onClick="onOffClick"
 	        android:text="off" />
         -->
 
