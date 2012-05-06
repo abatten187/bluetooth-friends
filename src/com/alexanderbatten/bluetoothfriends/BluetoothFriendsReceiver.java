@@ -17,7 +17,6 @@ public class BluetoothFriendsReceiver extends BroadcastReceiver {
 	public void onReceive(Context context, Intent intent) {
 		Log.i(TAG, "onReceive - "+ intent.getAction());
 		String action = intent.getAction();
-		//TESTING EGIT
 		//PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
 		//wakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, TAG);
 		//wakeLock.setReferenceCounted(false);
