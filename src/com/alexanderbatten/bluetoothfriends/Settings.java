@@ -47,7 +47,7 @@ public class Settings extends PreferenceActivity {
 		Intent btsIntent = new Intent(context, BluetoothFriendsReceiver.class);
 		btsIntent.setAction(BluetoothFriendsReceiver.ACTION_BLUETOOTHSCAN);
 		PendingIntent btsSender = PendingIntent.getBroadcast(context, 1871, btsIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-		AlarmManager alarmManager = (AlarmManager) context.getSystemService(context.ALARM_SERVICE);
+		AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
 		alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, btsCal.getTimeInMillis(), btsInterval, btsSender);
 	}
 	
@@ -56,7 +56,7 @@ public class Settings extends PreferenceActivity {
 		Intent btsIntent = new Intent(context, BluetoothFriendsReceiver.class);
 		btsIntent.setAction(BluetoothFriendsReceiver.ACTION_BLUETOOTHSCAN);
 		PendingIntent btsSender = PendingIntent.getBroadcast(context, 1871, btsIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-		AlarmManager alarmManager = (AlarmManager) context.getSystemService(context.ALARM_SERVICE);
+		AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
 		alarmManager.cancel(btsSender);
 	}
 	
@@ -79,7 +79,7 @@ public class Settings extends PreferenceActivity {
 		Intent suIntent = new Intent(context, BluetoothFriendsReceiver.class);
 		suIntent.setAction(BluetoothFriendsReceiver.ACTION_SERVERUPLOAD);
 		PendingIntent suSender = PendingIntent.getBroadcast(context, 1872, suIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-		AlarmManager alarmManager = (AlarmManager) context.getSystemService(context.ALARM_SERVICE);
+		AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
 		alarmManager.cancel(suSender);
 	}
 

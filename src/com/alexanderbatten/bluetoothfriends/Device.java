@@ -3,18 +3,14 @@ package com.alexanderbatten.bluetoothfriends;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Date;
 import java.util.List;
 
 import android.bluetooth.BluetoothClass;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.util.Log;
 
 public class Device {
-	private static final String TAG = "Device";
-	
 	private String deviceMacAddress;
 	private String deviceName;
 	private String deviceCustomName;

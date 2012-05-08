@@ -15,7 +15,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class EncounterArrayAdapter extends ArrayAdapter<Encounter> {
-	private static final String TAG = "EncounterArrayAdapter";
 	
 	private Context context;
 	private List<Encounter> encounters;

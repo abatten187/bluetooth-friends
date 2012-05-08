@@ -120,7 +120,6 @@ public class ViewAllDevices extends ListActivity {
 	};
 	
 	private class DeviceArrayAdapter extends ArrayAdapter<Device> {
-		private static final String TAG = "DeviceArrayAdapter";
 		
 		private Context context;
 		private List<Device> devices;
@@ -129,9 +128,6 @@ public class ViewAllDevices extends ListActivity {
 		private TextView deviceName;
 		private TextView deviceRelationshipStatus;
 		private ProgressBar deviceRelationshipProgress;
-		
-		private TextView deviceLastEncounter;
-		private TextView deviceEncounters;
 		
 		public DeviceArrayAdapter(Context context, int textViewResourceId, List<Device> objects) {
 			super(context, textViewResourceId, objects);

@@ -10,9 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 public class LeaderboardArrayAdapter extends ArrayAdapter<UserScore> {
-	private static final String TAG = "LeaderboardArrayAdapter";
-	
-	private Context context;
 	private List<UserScore> userScores;
 
 	private TextView userName;
@@ -20,7 +17,6 @@ public class LeaderboardArrayAdapter extends ArrayAdapter<UserScore> {
 	
 	public LeaderboardArrayAdapter(Context context, int textViewResourceId, List<UserScore> objects) {
 		super(context, textViewResourceId, objects);
-		this.context = context;
 		this.userScores = objects;
 	}
 	

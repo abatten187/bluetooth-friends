@@ -7,9 +7,6 @@ import java.io.InputStreamReader;
 import java.net.URI;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
@@ -25,7 +22,6 @@ import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.os.IBinder;
-import android.os.Looper;
 import android.os.PowerManager;
 import android.provider.Settings.Secure;
 import android.util.Log;
@@ -131,7 +127,7 @@ public class ServerService extends Service {
 				if (!json_response.getString("devices").equals("[]")){
     				Log.v(TAG, "Extracting successful devices..");
     				JSONObject json_response_devices = new JSONObject(json_response.getString("devices"));
-    				Iterator iDevices = json_response_devices.keys();
+    				Iterator<?> iDevices = json_response_devices.keys();
     				while(iDevices.hasNext()){
     					String deviceMac = (String) iDevices.next();
     					String deviceResponse = json_response_devices.getString(deviceMac);

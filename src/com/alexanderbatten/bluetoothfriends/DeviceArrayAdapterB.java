@@ -11,15 +11,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DeviceArrayAdapterB extends ArrayAdapter<Device> {
-	private static final String TAG = "DeviceArrayAdapter";
 	
 	private Context context;
 	private List<Device> devices;
 
 	private ImageView deviceIcon;
 	private TextView deviceName;
-	private TextView deviceLastEncounter;
-	private TextView deviceEncounters;
 	
 	public DeviceArrayAdapterB(Context context, int textViewResourceId, List<Device> objects) {
 		super(context, textViewResourceId, objects);
