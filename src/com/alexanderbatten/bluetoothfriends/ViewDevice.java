@@ -38,7 +38,7 @@ public class ViewDevice extends ListActivity {
 		DBAdapter db = new DBAdapter(this);
 		db.open();
 		Device device = db.getDevice(extras.getString("deviceMac"));
-		List<Encounter> encounters = db.getEncounters(device);
+		allEncounters = db.getEncounters(device);
 		long totalEncounterDuration = db.getTotalEncounterDuration(device);
 		db.close();
 		
@@ -47,7 +47,7 @@ public class ViewDevice extends ListActivity {
 		
 		
         this.setTitle(this.getString(R.string.app_name) +" > View Device");
-        EncounterArrayAdapter adapter = new EncounterArrayAdapter(getApplicationContext(), R.layout.encounterlist_row, encounters);
+        EncounterArrayAdapter adapter = new EncounterArrayAdapter(getApplicationContext(), R.layout.encounterlist_row, allEncounters);
         this.setListAdapter(adapter);
 	}
 	
