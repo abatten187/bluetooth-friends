@@ -1,0 +1,51 @@
+# BluetoothFriends
+
+An Android application that discovers and tracks nearby Bluetooth devices over time, creating a social network of device encounters.
+
+## Overview
+
+BluetoothFriends is an Android app that continuously scans for Bluetooth devices in your vicinity and maintains a history of your encounters with them. The app tracks when and where you've been near specific devices, allowing you to see patterns in your daily interactions with the Bluetooth-enabled world around you.
+
+## Features
+
+- **Automatic Bluetooth Scanning**: Background service that periodically scans for nearby Bluetooth devices
+- **Device Tracking**: Records and stores information about discovered devices including MAC address, device name, and device class
+- **Encounter History**: Maintains a detailed log of all encounters with each device, including timestamps and location data
+- **Friends List**: View all discovered devices and their encounter statistics
+- **Surrounding Devices**: See real-time view of currently nearby Bluetooth devices
+- **Online Leaderboard**: Compare your encounter statistics with other users
+- **Notifications**: Get notified when frequently encountered devices are nearby
+- **Custom Device Names**: Assign friendly names to devices for easy identification
+
+## Technical Details
+
+- **Platform**: Android (Minimum SDK 7)
+- **Package**: com.alexanderbatten.bluetoothfriends
+- **Database**: SQLite for local device and encounter storage
+- **Services**: Background services for Bluetooth scanning and server synchronization
+
+## Permissions Required
+
+- `BLUETOOTH`: Access Bluetooth hardware
+- `BLUETOOTH_ADMIN`: Enable Bluetooth discovery
+- `ACCESS_FINE_LOCATION`: Record location data for encounters
+- `INTERNET`: Sync data with online leaderboard
+- `VIBRATE`: Provide haptic feedback for notifications
+- `RECEIVE_BOOT_COMPLETED`: Start services on device boot
+- `WAKE_LOCK`: Keep device awake during Bluetooth scans
+
+## Project Structure
+
+- `src/com/alexanderbatten/bluetoothfriends/`: Java source code
+  - `BluetoothService.java`: Background Bluetooth scanning service
+  - `Device.java`: Device data model
+  - `Encounter.java`: Encounter data model
+  - `DBAdapter.java`: Database management
+  - `MainMenu.java`: Main application activity
+  - `ViewAllDevices.java`: Device list activity
+  - `ViewDevice.java`: Individual device detail activity
+  - `OnlineLeaderboard.java`: Leaderboard activity
+
+## Version
+
+Current version: 1.0.5 (8/02/12)
